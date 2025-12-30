@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quiz — WasteAware</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand"><h1>WasteAware</h1><p class="tagline">Quiz</p></div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="learn.html">Learn</a>
+        <a href="quiz.html" class="active">Quiz</a>
+        <a href="local.html">Local Info</a>
+        <a href="feedback.html">Feedback</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container content">
+    <article class="card quiz-card">
+      <h2>Quick Quiz: Test your knowledge</h2>
+      <p id="quizIntro">Answer the questions and submit.</p>
+
+      <div id="quizArea"></div>
+
+      <div id="quizActions" style="margin-top:12px;">
+        <button id="submitQuiz" class="btn">Submit Answers</button>
+        <button id="restartQuiz" class="btn ghost" style="display:none;">Try Again</button>
+      </div>
+
+      <div id="quizResult" style="margin-top:14px;"></div>
+    </article>
+  </main>
+
+  <footer class="site-footer"><div class="container"><small>© 2025 WasteAware</small></div></footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

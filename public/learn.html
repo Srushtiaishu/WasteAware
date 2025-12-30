@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Learn — WasteAware</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Inline styles just for the search alignment -->
+  <style>
+    /* -------- INLINE SEARCH UI -------- */
+    .inline-search {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      width: 100%;
+    }
+
+    .inline-search input {
+      flex: 1;
+      padding: 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    .inline-search .search-btn {
+      padding: 12px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    /* Make it responsive on small screens */
+    @media (max-width: 600px) {
+      .inline-search {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .inline-search .search-btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <h1>WasteAware</h1>
+      <p class="tagline">Learn</p>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="learn.html" class="active">Learn</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="local.html">Local Info</a>
+      <a href="feedback.html">Feedback</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container content">
+
+  <!-- 🔍 NEW LIVE SEARCH SUMMARIZER (TOP POSITION) -->
+  <section id="research-explorer" class="card search-explorer">
+
+    <h2>🔍 Live Research Explorer</h2>
+    <p>Search reliable topics related to waste, pollution, recycling and environment. Click results to generate a clean summary.</p>
+
+    <!-- Input + button aligned on same row -->
+    <form id="textSearchForm" class="search-form inline-search">
+      <input id="textSearchInput" type="text" placeholder="Try: landfill, recycling, composting..." autocomplete="off">
+      <button type="submit" class="btn search-btn">Search</button>
+    </form>
+
+    <div id="textSearchStatus" class="status"></div>
+
+    <!-- Result pills -->
+    <div id="textResultsList" class="result-pill-row"></div>
+
+    <!-- Summary content -->
+    <article id="textArticleContent" class="article-output">
+      <h3 id="textArticleTitle" class="placeholder">Search a topic to see a summary.</h3>
+    </article>
+  </section>
+
+
+
+  <!-- MAIN EDUCATIONAL SECTION -->
+  <article class="card">
+  <div class="infographic-advanced">
+  <h2 class="info-title">Learn About Waste Types</h2>
+  <p class="info-subtitle">Click a card to reveal useful information</p>
+
+    <!-- ♻️ RECYCLABLE -->
+    <div class="info-card" onclick="showDetails('Recyclable')">
+      <div class="icon">♻️</div>
+      <h3>Recyclable Waste</h3>
+    </div>
+
+    <!-- 🌿 ORGANIC -->
+    <div class="info-card" onclick="showDetails('organic')">
+      <div class="icon">🌱</div>
+      <h3>Organic Waste</h3>
+    </div>
+
+    <!-- 🗑️ GENERAL -->
+    <div class="info-card" onclick="showDetails('General')">
+      <div class="icon">🗑️</div>
+      <h3>General Waste</h3>
+    </div>
+
+    <!-- ☣️ HAZARDOUS -->
+    <div class="info-card" onclick="showDetails('Hazardous')">
+      <div class="icon">☣️</div>
+      <h3>Hazardous Waste</h3>
+    </div>
+
+<div id="details-box" class="details-box hidden">
+
+  <h3 id="detail-title"></h3>
+
+  <p id="detail-description"></p>
+
+  <h4>What can go in this bin?</h4>
+  <p id="detail-can"></p>
+
+  <h4>What cannot go in this bin?</h4>
+  <p id="detail-cannot"></p>
+
+  <h4>Tips</h4>
+  <p id="detail-tips"></p>
+
+  <h4>Environmental Impact</h4>
+  <p id="detail-impact"></p>
+</div>
+</div>
+
+    <h3>Recycling & Preparing Materials</h3>
+<p>Always rinse containers, remove food residue and sort them properly before recycling.</p>
+
+<div class="video-container">
+  <a href="https://www.youtube.com/watch?v=0ZiD_Lb3Tm0" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.youtube.com/vi/0ZiD_Lb3Tm0/maxresdefault.jpg" 
+         alt="What Happens to Your Recycling" 
+         style="width: 100%; max-width: 640px; cursor: pointer;">
+    <p>▶️ Watch: What Happens to Your Recycling</p>
+  </a>
+</div>
+<div class="two-column-wrapper">
+
+  <!--Compost Calculator -->
+  <div>
+      <h3 class="compost-title">🌱 Composting Calculator</h3>
+      <p class="compost-sub">Estimate how much compost you can produce monthly + your CO₂ savings.</p>
+
+      <div class="compost-box">
+
+        <label>Kitchen Waste (kg per week)</label>
+        <input type="number" id="kitchenWaste" placeholder="e.g. 3">
+
+        <label>Garden Waste (kg per week)</label>
+        <input type="number" id="gardenWaste" placeholder="e.g. 5">
+
+        <button onclick="calculateCompost()" class="compost-btn">Calculate</button>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <small>© 2025 WasteAware</small>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>WasteAware — Sustainable Waste Management</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>WasteAware</h1>
+        <p class="tagline">Awareness • Action • Health — SDG 3, 11 &amp; 13</p>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="learn.html">Learn</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="local.html">Local Info</a>
+        <a href="feedback.html">Feedback</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container home-hero">
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <h2>Learn simple steps to manage waste safely and sustainably</h2>
+          <p>Interactive guides, short videos, infographics and quizzes to help communities practise proper waste separation, recycling and composting.</p>
+          <div class="hero-actions">
+            <a class="btn" href="learn.html">Get started</a>
+            <a class="btn ghost" href="quiz.html">Take the quiz</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1762805543739-861a9901a304?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDd8fFRyYW5zZm9ybSUyMFdhc3RlJTIwSW50byUyMFdvcnRoJTJDJTIwT25lJTIwSGFiaXQlMjBhdCUyMGElMjBUaW1lfGVufDB8fDB8fHww" alt="Recycling hands" />
+        </div>
+      </div>
+    </section>
+
+    <section class="info-banner">
+      <h3>⚠️ The Global Waste Crisis in Numbers</h3>
+      <p>Every year, the world generates 2.01 billion tonnes of municipal solid waste, with at least 33% not managed in an environmentally safe manner. Poor waste management directly impacts community health, contributes to climate change, and threatens ecosystems worldwide.</p>
+      <div class="info-facts">
+        <div class="fact">
+          <div class="fact-icon">🌍</div>
+          <div class="fact-title">2.01B</div>
+          <div class="fact-desc">tonnes of waste yearly</div>
+        </div>
+        <div class="fact">
+          <div class="fact-icon">♻️</div>
+          <div class="fact-title">13.5%</div>
+          <div class="fact-desc">global recycling rate</div>
+        </div>
+        <div class="fact">
+          <div class="fact-icon">🔥</div>
+          <div class="fact-title">1.6B</div>
+          <div class="fact-desc">tonnes CO₂ from waste</div>
+        </div>
+      </div>
+    </section>
+ <section class="waste-sorter">
+        <h2>Interactive Waste Sorting Tool</h2>
+        <p class="ws-desc">Type an item to find out which bin it belongs to.</p>
+
+        <div class="ws-search-box">
+          <input id="wsInput" type="text" placeholder="e.g., plastic bottle, banana peel, battery">
+          <button onclick="checkWaste()">Sort</button>
+        </div>
+
+        <div id="wsResult" class="ws-result hidden">
+          <div class="ws-icon" id="wsIcon">🗑️</div>
+          <h3 id="wsCategory">Category</h3>
+          <p id="wsExplanation"></p>
+          <a id="wsLearnMore" href="#" target="_blank"></a>
+        </div>
+      </section>
+  </div>
+</div>
+  </div>
+</section>
+    <section class="impact">
+      <h3 id="impact">Why Every Action Counts</h3>
+      <p>Improper waste management pollutes air and water, increases disease risks (including respiratory infections, diarrhea, and vector-borne diseases), and contributes 5% of global greenhouse gas emissions. Small changes at home separating waste, recycling clean materials, and composting organics have outsized benefits for community health, climate resilience, and environmental justice.</p>
+      <div class="stats-row">
+        <div class="stat">
+          <div class="stat-num">SDG 3</div>
+          <div class="stat-label">Good Health & Well-being</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">SDG 11</div>
+          <div class="stat-label">Sustainable Cities & Communities</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">SDG 13</div>
+          <div class="stat-label">Climate Action</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="resources" class="resources">
+      <h3>📚 Trusted Resources & Data Sources</h3>
+      <p class="resources-intro">Our content is backed by leading international organizations and peer-reviewed research. Explore these authoritative sources to deepen your understanding:</p>
+      <div class="resources-grid">
+        <div class="resource-card">
+          <div class="resource-icon">🌍</div>
+          <h4>UN Environment Programme</h4>
+          <p>Global waste management statistics, best practices, and policy frameworks for sustainable cities.</p>
+          <a href="https://www.unep.org" target="_blank" class="resource-link">Visit UNEP →</a>
+        </div>
+        <div class="resource-card">
+          <div class="resource-icon">🏥</div>
+          <h4>World Health Organization</h4>
+          <p>Health impacts of poor waste management, disease prevention, and community health guidelines.</p>
+          <a href="https://www.who.int" target="_blank" class="resource-link">Visit WHO →</a>
+        </div>
+        <div class="resource-card">
+          <div class="resource-icon">🌡️</div>
+          <h4>IPCC Climate Reports</h4>
+          <p>Climate change data, greenhouse gas emissions from waste, and mitigation strategies.</p>
+          <a href="https://www.ipcc.ch" target="_blank" class="resource-link">Visit IPCC →</a>
+        </div>
+        <div class="resource-card">
+          <div class="resource-icon">🏛️</div>
+          <h4>World Bank Data</h4>
+          <p>Municipal solid waste statistics, economic impacts, and sustainable development indicators.</p>
+          <a href="https://www.worldbank.org" target="_blank" class="resource-link">Visit World Bank →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© 2025 WasteAware — Developed for CS888 project. Data sources: UN Environment Programme, World Bank. Built with HTML, CSS and JavaScript.</small>
+    </div>
+  </footer>
+
+  <!-- Existing small behaviours (smooth scroll + fade-in) -->
+  <script>
+    // Smooth scrolling for on-page anchors (e.g. #impact, #resources)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav a');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -100px 0px' };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.card, .stat, .resource-card').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'all 0.6s ease-out';
+      observer.observe(el);
+    });
+  </script>
+
+  <script src="app.js"></script>
+  
+</body>
+</html>

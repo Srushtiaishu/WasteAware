@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — WasteAware</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand"><h1>WasteAware</h1><p class="tagline">Contact</p></div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="learn.html">Learn</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="local.html">Local Info</a>
+        <a href="feedback.html" class="active">Feedback</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container content">
+    <article class="card contact-card">
+      <h2>Feedback</h2>
+      <p>Your feedback helps improve content and local accuracy. Leave a short message and optional email. Feedback is saved locally and can be downloaded.</p>
+
+      <form id="feedbackForm">
+        <label for="name">Name (optional)</label>
+        <input id="name" type="text" placeholder="Your name">
+
+        <label for="email">Email (optional)</label>
+        <input id="email" type="email" placeholder="you@example.com">
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" required placeholder="Tell us about local recycling facilities, errors, or suggestions..."></textarea>
+
+        <div style="margin-top:8px;">
+          <button class="btn" type="submit">Save Feedback</button>
+          <button id="downloadFeedback" class="btn ghost" type="button" style="margin-left:8px;">Download Saved Feedback</button>
+          <button id="clearFeedback" class="btn ghost" type="button" style="margin-left:8px;">Clear Saved Feedback</button>
+        </div>
+      </form>
+
+      <div id="feedbackStatus" style="margin-top:12px;"></div>
+    </article>
+  </main>
+
+  <footer class="site-footer"><div class="container"><small>© 2025 WasteAware</small></div></footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
